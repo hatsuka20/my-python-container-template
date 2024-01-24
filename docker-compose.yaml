@@ -1,0 +1,10 @@
+services:
+  prod:
+    build:
+      context: .
+      target: prod
+    image: "python-env/prod:latest"
+    volumes:
+      - .:/working
+    command: /bin/bash
+    tty: true
